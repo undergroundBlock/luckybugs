@@ -3,13 +3,13 @@
 import PostCard from '@/components/postCard/PostCard';
 import { getPosts } from '@/services/posts';
 import Post from '@/types/Post';
-import { Metadata } from 'next';
+// import { Metadata } from 'next';
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'Blog | Psytech news ',
-  description: 'News on psytech festival',
-}
+// export const metadata: Metadata = {
+//   title: 'Blog | Psytech news ',
+//   description: 'News on psytech festival',
+// }
 
 
 
