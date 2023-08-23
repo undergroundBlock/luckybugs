@@ -1,5 +1,3 @@
-'use client'
-
 import { usePathname } from 'next/navigation';
 import { getPost } from "@/services/posts"
 import Link from "next/link"
