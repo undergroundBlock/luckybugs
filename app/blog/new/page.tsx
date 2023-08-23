@@ -1,9 +1,11 @@
+import PostForm from '@/components/postForm/PostForm'
 import Image from 'next/image'
 
 export default function NewPostPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="">
       <div>NewPost</div>
+      <PostForm />
     </main>
   )
 }
