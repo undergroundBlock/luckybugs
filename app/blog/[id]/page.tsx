@@ -1,15 +1,15 @@
-import { usePathname } from 'next/navigation';
 import { getPost } from "@/services/posts"
 import Link from "next/link"
 import Post from '@/types/Post';
 
-interface PostEdit {
+interface BlogPostProps {
   params: {
-    postId: string,
+    postId: string
   }
 }
 
-export function generateMetadata(props: PostEdit) {
+export async function generateMetadata(props: BlogPostProps) {
+  console.log(props.params.postId + "555")
 
   return{
     title: `Post ${props.params.postId}`,
@@ -17,10 +17,9 @@ export function generateMetadata(props: PostEdit) {
   }
 }
 
-export default async function BlogPost(props: PostEdit) {
+export default async function BlogPost(props: BlogPostProps) {
 
   const {postId} = props.params
-
   const  data: Post = await getPost(postId)
   const {title, body} = data
   return (
