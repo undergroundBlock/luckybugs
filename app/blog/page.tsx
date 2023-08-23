@@ -1,4 +1,4 @@
-// 'use client';
+'use client';
 
 import PostCard from '@/components/postCard/PostCard';
 import { getPosts } from '@/services/posts';
