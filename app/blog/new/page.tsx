@@ -5,7 +5,7 @@ export default function NewPostPage() {
   return (
     <main className="">
       <div>NewPost</div>
-      <PostForm />
+      {/* <PostForm /> */}
     </main>
   )
 }
