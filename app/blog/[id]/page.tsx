@@ -5,7 +5,7 @@ import Post from '@/types/Post';
 
 interface PostEdit {
   params: {
-    postId: string
+    postId: string,
   }
 }
 
@@ -19,10 +19,6 @@ export function generateMetadata(props: PostEdit) {
 
 export default async function BlogPost(props: PostEdit) {
 
-  const pathname: string = await usePathname();
-  const id: string[] = pathname.split('/blog/', 2)
-  const postId2 = id[1].toString()
-
   const {postId} = props.params
 
   const  data: Post = await getPost(postId)
@@ -30,8 +26,8 @@ export default async function BlogPost(props: PostEdit) {
   return (
     <>
     <header className=''>
-      <h1>{postId}{title} - {postId2}</h1>
-      <Link href={`/blog/${postId2}/Edit`}>Edit</Link>
+      <h1>{title} - {postId}</h1>
+      <Link href={`/blog/${postId}/Edit`}>Edit</Link>
       <button className='btn--red'>Delete</button>
       <p>{body}</p>
     </header>

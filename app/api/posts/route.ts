@@ -1,4 +1,3 @@
-// import { addPost, getPosts } from "@/lib/data"
 import Post from "@/types/Post"
 import { NextRequest, NextResponse } from "next/server"
 
