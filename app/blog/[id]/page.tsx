@@ -3,7 +3,7 @@ import Link from "next/link"
 import Post from '@/types/Post';
 
 interface BlogPostProps {
-  params: {
+  params: { 
     postId: string
   }
 }
